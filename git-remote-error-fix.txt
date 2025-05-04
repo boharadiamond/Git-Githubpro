@@ -1,0 +1,29 @@
+
+Q: How to fix error when running `git remote add origin <url>`?
+
+Possible Errors & Solutions:
+
+1. Remote already exists
+Error: fatal: remote origin already exists.
+Fix:
+git remote remove origin
+git remote add origin <url>
+
+2. Invalid repository URL
+Error: fatal: repository '<url>' not found
+Fix:
+- Check that the URL is correct.
+- Example formats:
+  - HTTPS: https://github.com/username/repo.git
+  - SSH: git@github.com:username/repo.git
+
+3. Not a Git repository
+Error: fatal: not a git repository (or any of the parent directories): .git
+Fix:
+git init
+
+4. Permission denied (Authentication issue)
+Error: Permission denied (publickey) or fatal: Authentication failed
+Fix:
+- For SSH: Add your SSH key to GitHub.
+- For HTTPS: Use a Personal Access Token instead of password.
